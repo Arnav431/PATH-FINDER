@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-API_KEY = "AIzaSyDj85BV5ZttJDvYj34UpA1mFDuO6J2DHXI"
+API_KEY = "AIzaSyAhQYUFnrrvrb7FEf49y-TiKbN-83pFlQk"
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API_KEY}"
 
 @app.route('/api/career-recommendations', methods=['POST'])
