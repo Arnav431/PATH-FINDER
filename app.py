@@ -1,16 +1,12 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 
-app = Flask(__name__, static_url_path='', static_folder='')
+app = Flask(__name__)
 CORS(app)
 
 API_KEY = "AIzaSyDj85BV5ZttJDvYj34UpA1mFDuO6J2DHXI"
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API_KEY}"
-
-@app.route('/')
-def serve_index():
-    return send_from_directory('.', 'i2.html')
 
 @app.route('/api/career-recommendations', methods=['POST'])
 def get_career_recommendations():
